@@ -1,0 +1,40 @@
+GPS vs ORB-SLAM3 TRAJECTORY COMPARISON
+======================================================================
+
+GPS Trajectory:
+  Number of points: 7
+  Total distance: 63.92 meters
+  Duration: 60.00 seconds
+  Latitude range: 33.63611559° to 33.63623779°
+  Longitude range: 73.06864112° to 73.06922566°
+
+SLAM Trajectory:
+  Number of keyframes: 346
+  Total distance: 7.69 meters
+  Duration: 67.17 seconds
+
+Alignment Parameters:
+  Scale factor: 8.313
+  Rotation angle: 280°
+  Initial alignment error: 36.27 meters
+
+Accuracy Metrics:
+  RMSE: 11.03 meters
+  Mean error: 10.06 meters
+  Max error: 15.68 meters
+  Min error: 2.29 meters
+
+Interpretation:
+  The trajectories have been aligned using:
+    1. Centering (remove translation offset)
+    2. Scaling (match trajectory lengths)
+    3. Rotation (align orientations)
+
+  Differences between GPS and SLAM may be due to:
+    - GPS accuracy limitations (~5-10m typical for smartphones)
+    - SLAM drift over time (accumulates without loop closure)
+    - Different sampling rates (GPS ~1Hz vs SLAM keyframes)
+    - GPS multipath effects (signal bouncing off buildings)
+    - SLAM scale ambiguity in monocular vision
+
+  Both methods successfully tracked the camera/phone movement!

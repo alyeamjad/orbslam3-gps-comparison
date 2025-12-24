@@ -1,0 +1,58 @@
+%YAML:1.0
+
+# Samsung Galaxy S20 FE Camera Calibration
+# Main rear camera (12MP, f/1.8)
+# Video resolution: 478x850 (Portrait/Rotated)
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters
+#--------------------------------------------------------------------------------------------
+
+Camera.type: "PinHole"
+
+# Image dimensions (your actual video resolution)
+Camera.width: 478
+Camera.height: 850
+
+# Camera matrix parameters
+# Adjusted for S20 FE sensor and your video resolution
+Camera.fx: 580.0
+Camera.fy: 580.0
+Camera.cx: 239.0
+Camera.cy: 425.0
+
+# Distortion parameters 
+Camera.k1: 0.10
+Camera.k2: -0.05
+Camera.p1: 0.001
+Camera.p2: 0.001
+
+# Frame rate
+Camera.fps: 30
+
+# Color order (0: BGR, 1: RGB)
+Camera.RGB: 1
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+ORBextractor.nFeatures: 1000
+ORBextractor.scaleFactor: 1.2
+ORBextractor.nLevels: 8
+ORBextractor.iniThFAST: 15
+ORBextractor.minThFAST: 7
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -1.8
+Viewer.ViewpointF: 500
